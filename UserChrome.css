@@ -1,0 +1,196 @@
+/* UserChrome.css for Mozilla Firefox */
+/* Remove access to user interface elements that aren't suitable for application virtualization */
+ 
+/* Options - Advanced - General - System Defaults */
+#systemDefaultsGroup { display: none !important; }
+ 
+/* Options / Advanced / Update / Firefox updates group box */
+#updateApp  { display: none !important; }
+ 
+/* Help - About - Check for Updates button */
+#updateButton { display: none !important; }
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+#nav-bar { display: none }
+#urlbar { -moz-appearance:none !important; }
+#urlbar-container { display: none !important; }
+#openLocation, #urlbar-container { display:none!important; }
+#search-container { display:none!important; }
+#personal-bookmarks { display:none!important; }
+#PersonalToolbar { display:none!important; }
+#CustomizeToolbarWindow { display:none!important; }
+#helpMenu, #edit-menu { display: none !important; }
+#back-button[disabled="true"] { display: none; }
+#forward-button[disabled="true"] { display: none; }
+#stop-button[disabled="true"] { display: none; }
+#home-button { display: none; }
+#go-button-stack, .search-go-button-stack { display: none !important; }
+#search-go-button-stack { display: none !important; }
+#throbber-box { display: none !important; }
+#keywordRow { display: -moz-grid-line !important; }
+tab[selected="true"] { min-width: 200px !important; }
+
+
+/* Hide dropdown arrows in Back & Forward buttons */ 
+#back-button .toolbarbutton-menubutton-dropmarker, 
+#forward-button .toolbarbutton-menubutton-dropmarker 
+{ display: none !important; } 
+
+/* Hide Find Toolbar */ 
+#FindToolbar { display: none !important; } 
+
+/* Don't show tab icons */ 
+.tab-icon { display: none !important; } 
+
+
+/* Hide the close button on the tab bar */ 
+.tabbrowser-tabs > stack > .tabs-closebutton-box > .tabs-closebutton, 
+.tabbrowser-tabs > stack > .tabs-right, 
+.tabbrowser-tabs > hbox > .tabs-right { 
+display: none !important; } 
+
+/* Hide close button on tab bar and side bar */ 
+.tabs-closebutton { 
+display: none !important; } 
+
+
+/* Hide styleselector/switcher */ 
+#page-theme-button[themes] { display: none !important; } 
+
+/* Status Bar Height */ 
+#status-bar { max-height: 21px !important; } 
+
+
+/* Hide type ahead auto-complete drop down in Address bar */ 
+#PopupAutoComplete, .autocomplete-tree { visibility: hidden !important; 
+display: none !important; } 
+
+/* Remove the drop down arrow in the Address bar */ 
+.autocomplete-history-dropmarker { 
+display: none !important; } 
+
+/* Remove the drop arrow in the Search bar */ 
+.searchbar-dropmarker-image {display: none !important;} 
+
+/* Remove Back/Forward drop-down arrows */ 
+.toolbarbutton-menubutton-dropmarker { display: none !important; } 
+
+/* Stop blinking text */ 
+blink { text-decoration: none ! important; } 
+
+/* Hide status bar icons */ 
+statusbarpanel#security-button, 
+statusbarpanel#page-report-button, 
+statusbarpanel#page-theme-button, 
+statusbarpanel#statusbar-updates { 
+display: none !important; } 
+
+/* Remove orange RSS icon in status bar */ 
+#livemark-button { display: none !important; } 
+
+/* Remove yellow shading in the urlbar */ 
+#urlbar[level="high"] > .autocomplete-textbox-container, 
+#urlbar[level="low"] > .autocomplete-textbox-container, 
+#urlbar[level="broken"] > .autocomplete-textbox-container { 
+background-color: white !important; } 
+
+
+/* Hide the Sidebar bookmarks Search box */ 
+#bookmarksPanel > hbox { display:none; } 
+
+/* Hide bookmarks sidebar scrollbar..scrollable with mouse wheel */ 
+#bookmarks-view, scrollbar[orient=vertical] { width: 0px !important; } 
+
+/* Remove the security-button from the status bar */ 
+#urlbar .info-icon { 
+display:none !important; } 
+
+/* Remove the statusbar-progress panel from the status bar */ 
+#statusbar-progresspanel { 
+display: none !important; } 
+
+/* Hide All Separators...except View>Toolbars>Bookmarks Toolbar(unknown) */ 
+menuitem + menuseparator { display: none; } 
+menu + menuseparator { display: none !important; } 
+
+/* Hide "normal" bookmark icons in the bookmarks menu */ 
+menuitem.bookmark-item > .menu-iconic-left { 
+display: none; } 
+
+/* Hide bookmark icons in the Personal Toolbar */ 
+toolbarbutton.bookmark-item > .toolbarbutton-icon { 
+display: none; } 
+
+/* Hide icons for bookmark folders in Bookmarks menu */ 
+menu.bookmark-item > .menu-iconic-left { 
+display: none; } 
+
+/* Hide icons for bookmark groups in Bookmarks menu */ 
+menuitem.bookmark-group > .menu-iconic-left { 
+display: none; } 
+
+/* Remove Favicon placeholder in URL bar */ 
+#page-proxy-deck { 
+display: none !important; } 
+
+
+/* Hide Menus */ 
+#navigator-toolbox menu[label="File"], 
+#navigator-toolbox menu[label="Go"], 
+#navigator-toolbox menu[label="Edit"], 
+#navigator-toolbox menu[label="View"], 
+#navigator-toolbox menu[label="Tools"], 
+#navigator-toolbox menu[label="Help"] { display: none !important; } 
+
+/* Hide Tools Menus */ 
+menuitem[label="Web Search"], 
+menuitem[label="Downloads"], 
+menuitem[label="Themes"], 
+menuitem[label="Extensions"], 
+menuitem[label="Read Mail (0 new)"], 
+menuitem[label="New Message..."], 
+menuitem[label="DOM Inspector"], 
+menuitem[label="Page Info"] { display: none; } 
+
+/* Hide Bookmarks Menuitems */ 
+menuitem[label="Add to Bookmarks..."], 
+menuitem[label="New Bookmark..."], 
+menuitem[label="New Separator"], 
+menuitem[label="Open in Tabs"] { display: none; } 
+
+menuitem[label="Open"], 
+menu[label="Mozilla Firefox & Mozilla Information"], 
+menu[label="Bookmarks Toolbar Folder"] { display: none !important; } 
+
+menupopup > menuitem[label="Bookmark This Page..."] {display: none !important;} 
+
+
+/* Hide Context Menuitems */ 
+#context-back, 
+#context-forward, 
+#context-reload, 
+#context-stop, 
+#context-viewsource, 
+#context-openlink, 
+#context-openlinkintab, 
+#context-viewpartialsource-selection, 
+#context-selectall, 
+menuitem[label="View Background Image"], 
+menuitem[label="Reload Tab"], 
+menuitem[label="Reload All Tabs"], 
+menuitem[label="Close Tab"] { display: none !important; } 
+
+menuitem[label="Open"], 
+menuitem[label="Open in New Tab"], 
+menuitem[label="Expand"], 
+menuitem[label="Manage Folder"], 
+menuitem[label="New Folder..."], 
+menuitem[label="Show Only This Frame"], 
+menuitem[label="Open in New Window"], 
+menuitem[label="JavaScript Console"], 
+menuitem[label="Reload Frame"], 
+menuitem[label="Bookmark This Frame..."], 
+menuitem[label="Save Frame As..."], 
+menuitem[label="View Frame Source"], 
+menuitem[label="View Frame Info"], 
+menuitem[label="Open Frame in New Window"] { display: none; }
