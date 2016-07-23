@@ -1,1 +1,1 @@
-# firefoxkiosk
+# Firefox Kiosk
